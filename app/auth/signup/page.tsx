@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -44,8 +44,23 @@ export default function SignupPage() {
     e.preventDefault();
     setIsLoading(true);
 
+    const newUserData = {
+      id: "",
+      name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      age: Number(
+        new Date().getFullYear() - new Date(formData.dateOfBirth).getFullYear()
+      ),
+      gender: "prefer not to say",
+      qualification: formData.qualification,
+      course: formData.courseOfInterest,
+      cohort: formData.cohort,
+      contactNo: formData.contactNo,
+      password: Math.random().toString(36).slice(-8),
+    };
+
     try {
-      const newUser = await createUser(formData);
+      const newUser = await createUser(newUserData);
 
       if (newUser) {
         toast({
@@ -63,6 +78,7 @@ export default function SignupPage() {
         });
       }
     } catch (error) {
+      console.error("Login error:", error);
       toast({
         title: "Submission error",
         description: "An error occurred. Please try again.",

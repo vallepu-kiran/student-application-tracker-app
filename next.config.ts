@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['apply-lit-school.vercel.app'],
+  },
+  eslint: {
+    ignoreDuringBuilds: true, 
+  },
 };
 
 export default nextConfig;

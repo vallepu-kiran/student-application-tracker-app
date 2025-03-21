@@ -27,7 +27,7 @@ export default function DashboardPage() {
     useState<ApplicationStatus | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   useEffect(() => {
     const fetchData = async () => {

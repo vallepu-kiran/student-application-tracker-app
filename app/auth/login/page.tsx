@@ -43,6 +43,7 @@ export default function Page() {
         router.push(callbackUrl);
       }
     } catch (error) {
+      console.error("Login error:", error);
       toast({
         title: "Login error",
         description: "An error occurred during login. Please try again.",

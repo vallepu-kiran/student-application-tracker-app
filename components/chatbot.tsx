@@ -38,21 +38,6 @@ export function Chatbot() {
           const applicationStatus = await getApplicationStatus();
 
           if (userData && applicationStatus) {
-            const contextMessage = `
-              User Information:
-              Name: ${userData.name}
-              Email: ${userData.email}
-              Course: ${userData.course}
-              Application Status: ${applicationStatus.status}
-              ${
-                applicationStatus.interviewDate
-                  ? `Interview Date: ${new Date(
-                      applicationStatus.interviewDate
-                    ).toLocaleString()}`
-                  : ""
-              }
-            `;
-
             setInitialMessage(true);
           }
         } catch (error) {

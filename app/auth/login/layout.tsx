@@ -99,9 +99,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                   How will I get the link to attend the program?
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-8 bg-gray-900/30">
-                  Once you're accepted into the program, you'll receive all
-                  necessary links and access information via email. Make sure to
-                  check your inbox regularly, including spam folders.
+                  Once you&apos;re accepted into the program, you&apos;ll
+                  receive all necessary links and access information via email.
+                  Make sure to check your inbox regularly, including spam
+                  folders.
                 </AccordionContent>
               </AccordionItem>
 

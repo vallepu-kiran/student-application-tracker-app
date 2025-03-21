@@ -3,7 +3,7 @@ export interface UserData {
   id: string;
   name: string;
   email: string;
-  age: string;
+  age: number;
   gender: string;
   qualification: string;
   course: string;

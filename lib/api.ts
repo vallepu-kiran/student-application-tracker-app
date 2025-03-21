@@ -1,11 +1,11 @@
 import { ApplicationStatus, UserData } from "@/lib/types";
 
-let users: UserData[] = [
+const users: UserData[] = [  
   {
     id: "1",
     name: "John Doe",
     email: "john@example.com",
-    age: "25",
+    age: 25, 
     gender: "male",
     qualification: "College Graduate",
     course: "Creator Marketer",
@@ -13,7 +13,7 @@ let users: UserData[] = [
   },
 ];
 
-let applications: ApplicationStatus[] = [
+const applications: ApplicationStatus[] = [  
   {
     id: "1",
     userId: "1",
@@ -53,7 +53,7 @@ export async function getUserByEmail(email: string): Promise<UserData | null> {
   });
 }
 
-export async function createUser(userData: any): Promise<UserData | null> {
+export async function createUser(userData: UserData): Promise<UserData | null> {  
   return new Promise((resolve) => {
     setTimeout(() => {
       const newUser: UserData = {

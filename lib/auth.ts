@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { getUserByEmail } from "./api";
-
-let isAuthenticated = false;
-let currentUser: any = null;
+import { UserData } from "@/lib/types";
 
 export function useAuth() {
-  const [authState, setAuthState] = useState({
+  const [authState, setAuthState] = useState<{
+    isAuthenticated: boolean;
+    currentUser: UserData | null;
+  }>({
     isAuthenticated: false,
     currentUser: null,
   });
@@ -13,7 +14,7 @@ export function useAuth() {
   useEffect(() => {
     const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
     const userJson = localStorage.getItem("currentUser");
-    const currentUser = userJson ? JSON.parse(userJson) : null;
+    const currentUser: UserData | null = userJson ? JSON.parse(userJson) : null;
 
     setAuthState({ isAuthenticated, currentUser });
   }, []);
@@ -21,17 +22,11 @@ export function useAuth() {
   return authState;
 }
 
-export async function signIn(
-  email: string,
-  password: string
-): Promise<boolean> {
+export async function signIn(email: string): Promise<boolean> {
   try {
     const user = await getUserByEmail(email);
 
     if (user) {
-      isAuthenticated = true;
-      currentUser = user;
-
       if (typeof window !== "undefined") {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("currentUser", JSON.stringify(user));
@@ -48,9 +43,6 @@ export async function signIn(
 }
 
 export async function signOut(): Promise<void> {
-  isAuthenticated = false;
-  currentUser = null;
-
   if (typeof window !== "undefined") {
     localStorage.removeItem("isAuthenticated");
     localStorage.removeItem("currentUser");

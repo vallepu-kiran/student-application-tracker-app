@@ -1,4 +1,4 @@
-import { CheckCircle2, Clock, XCircle } from 'lucide-react';
+import { CheckCircle2, Clock } from 'lucide-react';
 import { ApplicationStatus } from "@/lib/types";
 
 interface ApplicationTimelineProps {
