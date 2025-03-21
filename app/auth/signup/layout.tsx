@@ -178,7 +178,7 @@ export default function layout({ children }: { children: React.ReactNode })  {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Image
-                  src="/lit-logo.svg"
+                  src="https://apply-lit-school.vercel.app/assets/images/lit-logo.svg"
                   alt="LIT Logo"
                   width={40}
                   height={40}
