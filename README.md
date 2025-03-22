@@ -1,18 +1,36 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+Student Application Tracker App
 
-First, run the development server:
+Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A web application built with Next.js, TypeScript, and Tailwind CSS to help students track their applications efficiently. This project provides authentication and an intuitive UI for managing student applications.
+
+Features
+
+🔐 User Authentication (NextAuth.js)
+
+🎨 Responsive UI (Tailwind CSS)
+
+📄 Application Tracking System
+
+⚡ Fast and Optimized Performance (Next.js)
+
+🚀 Deployable on Vercel
+
+Getting Started
+
+Prerequisites
+
+Ensure you have the following installed:
+
+Node.js (>=16.x recommended)
+
+npm, yarn, pnpm, or bun
+
+Installation
+
+Clone the repository:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
