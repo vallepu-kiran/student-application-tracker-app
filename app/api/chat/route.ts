@@ -2,7 +2,7 @@ import { openai } from "@ai-sdk/openai";
 import { streamText } from "ai";
 import { getApplicationStatus, getUserData } from "@/lib/api";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "../auth/auth-options";
 
 export const maxDuration = 30;
 

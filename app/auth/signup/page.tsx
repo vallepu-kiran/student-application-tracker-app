@@ -78,10 +78,10 @@ export default function SignupPage() {
         });
       }
     } catch (error) {
-      console.error("Login error:", error);
+      console.error("Submission error:", error);
       toast({
         title: "Submission error",
-        description: "An error occurred. Please try again.",
+        description: error instanceof Error ? error.message : "An error occurred. Please try again.",
         variant: "destructive",
       });
     } finally {
