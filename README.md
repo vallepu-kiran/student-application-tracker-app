@@ -32,6 +32,7 @@ npm, yarn, pnpm, or bun
 
 # Clone the repository:
 git clone https://github.com/vallepu-kiran/student-application-tracker-app.git
+
 cd student-application-tracker-app
 
 ## Install dependencies:
