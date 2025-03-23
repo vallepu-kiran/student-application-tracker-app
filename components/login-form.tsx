@@ -47,7 +47,9 @@ export function LoginFormContent() {
       toast({
         title: "Login error",
         description:
-          error instanceof Error ? error.message : "An error occurred during login. Please try again.",
+          error instanceof Error
+            ? error.message
+            : "An error occurred during login. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -92,9 +94,6 @@ export function LoginFormContent() {
             </Button>
 
             <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <span className="w-full border-t" />
-              </div>
               <div className="relative flex justify-center text-xs uppercase">
                 <span className="bg-card px-2 text-muted-foreground">
                   Or continue with

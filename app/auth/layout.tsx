@@ -12,15 +12,17 @@ export default function layout({ children }: { children: React.ReactNode }) {
     <div className="flex flex-col min-h-screen bg-black text-white">
       <main className="flex-1">
         <section
-          className="w-full min-h-[320px] bg-[linear-gradient(to_top,rgba(0,0,0,0.8),rgba(0,0,0,0)),url('https://apply-lit-school.vercel.app/assets/images/banner.svg')] 
+          className="w-full min-h-[320px] 
              bg-no-repeat bg-cover bg-bottom 
              border border-transparent 
-             text-gray-100 box-border"
+             text-gray-100 box-border
+             bg-[linear-gradient(to_top,rgba(0,0,0,0.8),rgba(0,0,0,0)),url('https://apply-lit-school.vercel.app/assets/images/banner-mobile.svg')]
+             md:bg-[linear-gradient(to_top,rgba(0,0,0,0.8),rgba(0,0,0,0)),url('https://apply-lit-school.vercel.app/assets/images/banner.svg')]"
         >
           <div className="container px-4 pt-8">
             <div className="flex items-center">
               <Image
-                src="/lit-logo.svg"
+                src="https://apply-lit-school.vercel.app/assets/images/lit-logo.svg"
                 alt="LIT Logo"
                 width={40}
                 height={40}
@@ -29,6 +31,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </section>
+        
         <section className="w-full mt-10 justify-center">
           <div className="space-y-4 text-center">
             <h1 className="text-3xl font-bold">
@@ -40,7 +43,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         </section>
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-black">
-          <div className=" px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-12">
               Your Application Process
             </h2>
@@ -95,10 +98,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                 value="item-1"
                 className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/20"
               >
-                <AccordionTrigger className="px-6 py-8 hover:bg-gray-900/50 transition-all">
+                <AccordionTrigger className="px-6 py-4 md:py-8 hover:bg-gray-900/50 transition-all">
                   How will I get the link to attend the program?
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-8 bg-gray-900/30">
+                <AccordionContent className="px-6 py-4 md:py-8 bg-gray-900/30">
                   Once you&apos;re accepted into the program, you&apos;ll
                   receive all necessary links and access information via email.
                   Make sure to check your inbox regularly, including spam
@@ -110,10 +113,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                 value="item-2"
                 className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/20"
               >
-                <AccordionTrigger className="px-6 py-8 hover:bg-gray-900/50 transition-all">
+                <AccordionTrigger className="px-6 py-4 md:py-8 hover:bg-gray-900/50 transition-all">
                   What if I have questions about registration, attendance, etc?
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-8 bg-gray-900/30">
+                <AccordionContent className="px-6 py-4 md:py-8 bg-gray-900/30">
                   Our support team is available to help with any questions about
                   registration, attendance, or other program details. You can
                   reach out through the chat assistant on your dashboard or
@@ -125,10 +128,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                 value="item-3"
                 className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/20"
               >
-                <AccordionTrigger className="px-6 py-8 hover:bg-gray-900/50 transition-all">
+                <AccordionTrigger className="px-6 py-4 md:py-8 hover:bg-gray-900/50 transition-all">
                   Why is this program free?
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-8 bg-gray-900/30">
+                <AccordionContent className="px-6 py-4 md:py-8 bg-gray-900/30">
                   We believe in making quality education accessible. The program
                   is sponsored by industry partners who are invested in
                   developing the next generation of talent. While the core
@@ -141,10 +144,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                 value="item-4"
                 className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/20"
               >
-                <AccordionTrigger className="px-6 py-8 hover:bg-gray-900/50 transition-all">
+                <AccordionTrigger className="px-6 py-4 md:py-8 hover:bg-gray-900/50 transition-all">
                   Will I get the recording of the program?
                 </AccordionTrigger>
-                <AccordionContent className="px-8 py-4 bg-gray-900/30">
+                <AccordionContent className="px-6 py-4 md:py-8 bg-gray-900/30">
                   Yes, recordings of all sessions will be available in your
                   dashboard for a limited time. This allows you to review the
                   material or catch up if you missed a session.
@@ -155,10 +158,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
                 value="item-5"
                 className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/20"
               >
-                <AccordionTrigger className="px-6 py-8 hover:bg-gray-900/50 transition-all">
+                <AccordionTrigger className="px-6 py-4 md:py-8 hover:bg-gray-900/50 transition-all">
                   If I miss attending the class can I attend the repeat?
                 </AccordionTrigger>
-                <AccordionContent className="px-6 py-8 bg-gray-900/30">
+                <AccordionContent className="px-6 py-4 md:py-8 bg-gray-900/30">
                   We understand that schedules can be challenging. If you miss a
                   class, you can watch the recording and, in many cases, join
                   repeat sessions that are scheduled for different time zones or
@@ -176,7 +179,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <Image
-                  src="/lit-logo.svg"
+                  src="https://apply-lit-school.vercel.app/assets/images/lit-logo.svg"
                   alt="LIT Logo"
                   width={40}
                   height={40}
