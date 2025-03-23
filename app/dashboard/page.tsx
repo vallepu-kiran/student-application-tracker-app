@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, FileText, User, Loader } from "lucide-react"; // Import Loader icon
+import { Calendar, Clock, FileText, User, Loader } from "lucide-react"; 
 import { ApplicationTimeline } from "@/components/application-timeline";
 import { DashboardHeader } from "@/components/dashboard-header";
 import { DashboardShell } from "@/components/dashboard-shell";
