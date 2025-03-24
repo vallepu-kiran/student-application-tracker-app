@@ -82,7 +82,7 @@
   }
 }
 
-/* Add this if you need to use your theme variables */
+
 .theme-border {
   border-color: hsl(var(--border));
 }

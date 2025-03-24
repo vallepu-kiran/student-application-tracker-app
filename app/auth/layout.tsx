@@ -8,13 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { Loader } from "lucide-react";
 
-export default function layout({
-  children,
-  isLoading = false,
-}: {
-  children: React.ReactNode;
-  isLoading?: boolean;
-}) {
+export default function layout({ children, isLoading = false  }: { children: React.ReactNode, isLoading?: boolean  }) {
   return (
     <div className="flex flex-col min-h-screen bg-black text-white">
       <main className="flex-1">
@@ -38,7 +32,7 @@ export default function layout({
             </div>
           </div>
         </section>
-
+        
         <section className="w-full mt-10 justify-center">
           <div className="space-y-4 text-center">
             <h1 className="text-3xl font-bold">
@@ -48,6 +42,7 @@ export default function layout({
             {isLoading ? (
               <div className="flex justify-center items-center p-8">
                 <Loader className="h-8 w-8 animate-spin text-blue-500" />
+               
               </div>
             ) : (
               children
